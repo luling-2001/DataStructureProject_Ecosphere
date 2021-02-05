@@ -19,6 +19,8 @@ public:
 private slots:
     void on_quit_pushButton_clicked();
 
+    void on_start_pushButton_clicked();
+    
 private:
     Ui::MainWindow *ui;
 };

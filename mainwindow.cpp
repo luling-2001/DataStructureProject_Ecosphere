@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "gamewindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -49,3 +50,13 @@ void MainWindow::on_quit_pushButton_clicked()
     //单击quit按钮时，关闭当前窗口并退出程序
     QApplication::exit();
 }
+
+void MainWindow::on_start_pushButton_clicked()
+{
+    //单击start按钮，进入gamewindow界面
+    gamewindow *w = new gamewindow();
+    w->show();
+    this->close();
+}
+
+

@@ -18,8 +18,14 @@ public:
 private slots:
     void on_back_pushButton_clicked();
 
+    void on_reset_pushButton_clicked();
+
 private:
     Ui::gamewindow *ui;
+
+    int grassesNumber;
+    int cowsNumber;
+    int tigersNumber;
 };
 
 #endif // GAMEWINDOW_H

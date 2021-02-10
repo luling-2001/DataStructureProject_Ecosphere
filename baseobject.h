@@ -13,7 +13,6 @@
 #include <QGraphicsPixmapItem>
 
 
-
 //基本物体类，作为所有移动物体的基类，继承自QGraphicsPixmapItem类
 class baseObject : public QGraphicsPixmapItem
 {

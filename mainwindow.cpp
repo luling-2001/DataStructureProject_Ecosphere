@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    
+    //设置start_pushButton和quit_pushButton的样式
     ui->start_pushButton->setStyleSheet(
                 //在鼠标经过时改变按钮文本的颜色
                 "QPushButton:hover{"
@@ -44,19 +46,18 @@ MainWindow::~MainWindow()
 }
 
 
-
+//单击quit按钮时，关闭当前窗口并退出程序
 void MainWindow::on_quit_pushButton_clicked()
 {
-    //单击quit按钮时，关闭当前窗口并退出程序
     QApplication::exit();
 }
 
+
+//单击start按钮，进入gamewindow界面
 void MainWindow::on_start_pushButton_clicked()
 {
-    //单击start按钮，进入gamewindow界面
     gamewindow *w = new gamewindow();
     w->show();
     this->close();
 }
-
 

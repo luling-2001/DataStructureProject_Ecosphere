@@ -6,6 +6,12 @@ class baseObject
 {
 public:
     baseObject();
+    ~baseObject();
+    double getVelocity();
+    double getLifecycle();
+
+    void setVelocity(double);
+    void setLifecycle(double);
 
 private:
     double velocity;//移动速度

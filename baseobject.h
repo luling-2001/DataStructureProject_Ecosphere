@@ -30,9 +30,19 @@ public:
     int getX() const{return X;} //获得当前逻辑位置X
     int getY() const{return Y;} //获得当前逻辑位置Y
     
-    bool isCollide();//判断是否发生碰撞，包括碰撞边界以及碰撞其他移动物体
+    void setX(int X){this->X = X;}//设置逻辑位置X
+    void setY(int Y){this->Y = Y;}//设置逻辑位置Y
     
-    bool move();//移动函数
+    bool isCollide();//判断是否发生碰撞，包括碰撞边界以及碰撞其他移动物体，未实现
+    
+    bool move();//移动函数，简单实现，需改进补充
+    
+    void die();//死亡函数，可以实现死亡动画，未实现
+
+    int dir[4][2] = {{0, 1},
+                     {0, -1},
+                     {1, 0},
+                     {-1, 0}};//标记四个移动方向
 
 private:
     double velocity;//移动速度

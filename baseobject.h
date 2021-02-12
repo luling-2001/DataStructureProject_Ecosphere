@@ -14,6 +14,9 @@
 
 
 //基本物体类，作为所有移动物体的基类，继承自QGraphicsPixmapItem类
+
+//暂定后续与QGraphicsScene搭配，实现动画功能，即需要创建一个gameScene，然后在gameScene中实现生物链动画！！！！！！！！
+
 class baseObject : public QGraphicsPixmapItem
 {
 public:

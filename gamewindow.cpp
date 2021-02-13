@@ -7,6 +7,17 @@ gamewindow::gamewindow(QWidget *parent) :
     ui(new Ui::gamewindow)
 {
     ui->setupUi(this);
+
+    /////////////////////创建自定义scene类，如果需要设置scene的一些参数，需要在头文件中修改构造函数//////////////////////
+    GameScene = new gameScene();
+
+    ///////////////////创建view类//////////////////////////
+    GameView = new QGraphicsView();
+
+    //////////////////////新建移动物体类，调用gameScene的additem方法，插入到GameScene中/////////////////
+
+
+
 }
 
 gamewindow::~gamewindow()

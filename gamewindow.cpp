@@ -7,6 +7,9 @@ gamewindow::gamewindow(QWidget *parent) :
     ui(new Ui::gamewindow)
 {
     ui->setupUi(this);
+    
+    //设置窗口标题
+    this->setWindowTitle("Ecosphere");
         
     //设置GameWidget的样式
     ui->GameWidget->setStyleSheet("background-color:rgb(198, 253, 139)");

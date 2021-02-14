@@ -7,12 +7,19 @@ gamewindow::gamewindow(QWidget *parent) :
     ui(new Ui::gamewindow)
 {
     ui->setupUi(this);
+        
+    //设置GameWidget的样式
+    ui->GameWidget->setStyleSheet("background-color:rgb(198, 253, 139)");
+
 
     /////////////////////创建自定义scene类，如果需要设置scene的一些参数，需要在头文件中修改构造函数//////////////////////
     GameScene = new gameScene();
 
     ///////////////////创建view类//////////////////////////
     GameView = new QGraphicsView(GameScene, ui->GameWidget);//将GameView与GameScene相关联，使后续在GameScene中的动画能呈现在GameWidget中
+        
+    //隐藏GameView的边界
+    GameView->setStyleSheet("border: 0px");
 
     //////////////////////新建移动物体类，调用gameScene的additem方法，插入到GameScene中/////////////////
 

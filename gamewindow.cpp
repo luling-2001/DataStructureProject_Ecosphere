@@ -12,7 +12,7 @@ gamewindow::gamewindow(QWidget *parent) :
     GameScene = new gameScene();
 
     ///////////////////创建view类//////////////////////////
-    GameView = new QGraphicsView();
+    GameView = new QGraphicsView(GameScene, ui->GameWidget);//将GameView与GameScene相关联，使后续在GameScene中的动画能呈现在GameWidget中
 
     //////////////////////新建移动物体类，调用gameScene的additem方法，插入到GameScene中/////////////////
 

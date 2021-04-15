@@ -1,12 +1,13 @@
 #ifndef COW_H
 #define COW_H
-#include "baseobject.h"
+#include "consumer.h"
 
-//cow类继承自baseObject类
-class cow : public baseObject
+//cow类继承自consumer类
+class cow : public consumer
 {
 public:
     cow();
 };
 
 #endif // COW_H
+

@@ -14,9 +14,7 @@
 
 
 //基本物体类，作为所有移动物体的基类，继承自QGraphicsPixmapItem类
-
-//暂定后续与QGraphicsScene搭配，实现动画功能，即需要创建一个gameScene，然后在gameScene中实现生物链动画！！！！！！！！
-
+//暂定后续与QGraphicsScene搭配，实现动画功能，即需要创建一个gameScene，然后在gameScene中实现生物链动画
 class baseObject : public QGraphicsPixmapItem
 {
 public:
@@ -24,11 +22,11 @@ public:
     baseObject();
     ~baseObject();
 
-    double getVelocity();//得到速度
+
     double getLifecycle();//得到生命周期
     double getEnergy();//得到当前能量值
 
-    void setVelocity(double);//设置速度
+
     void setLifecycle(double);//设置生命周期
     void setEnergy(double);//设置能量值
 
@@ -37,12 +35,10 @@ public:
 
     void setX(int X){this->X = X;}//设置逻辑位置X
     void setY(int Y){this->Y = Y;}//设置逻辑位置Y
-    
+
     int getStartTime() const{return start_time;}//获得实例创建的start_time
 
     bool isCollide();//判断是否发生碰撞，包括碰撞边界以及碰撞其他移动物体，未实现
-
-    void move();//移动函数，简单实现，需改进补充
 
     void die();//死亡函数，可以实现死亡动画，未实现
 
@@ -51,11 +47,11 @@ public:
                      {1, 0},
                      {-1, 0}};//标记四个移动方向
 
+
 private:
-    
-    double velocity;//移动速度
     double lifecycle;//生命周期
     double energy;//能量值
+
     int X,Y;//逻辑位置
     int start_time;//记录每个实例被创建时的时间
 };
